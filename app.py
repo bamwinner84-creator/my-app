@@ -92,7 +92,7 @@ def evaluate_speech(api_key: str, user_text: str) -> SpeechEvaluation:
     prompt = f"[기준 원본 교안 (1강)]:\n{LECTURE_1_TEXT}\n\n[필수 키워드]:\n{', '.join(KEYWORDS)}\n\n[사용자 발표 텍스트]:\n{user_text}\n\n위 기준에 따라 사용자의 발표를 엄격하게 평가해 주세요."
     
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.8-flash",
         contents=prompt,
         config=types.GenerateContentConfig(
             system_instruction=system_instruction,
